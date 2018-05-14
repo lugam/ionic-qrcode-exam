@@ -6,7 +6,22 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <ion-item>
+    <ion-input type="text" placeholder="My QR Text" [(ngModel)]="qrText">
+    </ion-input>
+  </ion-item>
+  <button ion-button full icon-left (click)="createQR()" color="primary">
+      Create QR
+  </button>
   <button ion-button full icon-left (click)="openQRScanner()" color="secondary">
     <ion-icon name="qr-scanner"></ion-icon>QR SCAN
   </button>
+
+  <ion-card *ngIf="confirmedQR">
+    <ngx-qrcode [qrc-value]="confirmedQR"></ngx-qrcode>
+    <ion-card-content>
+      <p>{{ confirmedQR }}</p>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

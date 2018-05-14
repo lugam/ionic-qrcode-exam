@@ -8,11 +8,18 @@ import { ScanPage } from '../scan/scan';
 })
 export class HomePage {
 
+  qrText = "http://ryans-log.tistory.com";
+  confirmedQR = null;
+
   constructor(public navCtrl: NavController) {
   }
 
   openQRScanner() {
     this.navCtrl.push(ScanPage);
+  }
+
+  createQR() {
+    this.confirmedQR = this.qrText;
   }
 
 }

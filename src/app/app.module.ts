@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { QRScanner } from '@ionic-native/qr-scanner'
 
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ScanPage } from '../pages/scan/scan';
@@ -17,6 +19,7 @@ import { ScanPage } from '../pages/scan/scan';
   ],
   imports: [
     BrowserModule,
+    NgxQRCodeModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
